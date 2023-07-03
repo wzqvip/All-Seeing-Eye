@@ -4,19 +4,19 @@ from pathlib import Path
 
 import openai
 
-PROMPT = "Devourer of gods in Terraria"
+PROMPT = "An android with blob on forehead working in a bar in the environment like Cyberpunk 2077"
 # DATA_DIR = Path.cwd() / "responses"
-DATA_DIR = "responses"
+DATA_DIR = Path.cwd() / "msz_python_main"/ "images" / "responses"
 
 DATA_DIR.mkdir(exist_ok=True)
 
-openai.api_key="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"
+openai.api_key="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"
 
 #图片返回格式设置成b64_json,
 response = openai.Image.create(
     prompt=PROMPT,
     n=1,
-    size="256x256",
+    size="1024x1024",
     response_format="b64_json",
 )
 
