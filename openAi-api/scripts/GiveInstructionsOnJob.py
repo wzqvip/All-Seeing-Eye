@@ -16,11 +16,9 @@ response = openai.ChatCompletion.create(
         {"role": "user", "content": "I want to apply for a job, can you tell me how much possibility I cloud be accepted. And what can I do to acquire the job? You can directly reply to my questions without any explanation."},
         {"role": "assistant", "content": "Sure. Please Describe yourself and the job you are going to acquire. I will give you the chance you will be accepted and provide you help and also offer you jobs you also could be suit for.."},
         {"role": "user", "content": user_description},
-        {'role': 'system', 'content':" Now please output the percentage that the user could reach his goal in the format of 'Calculated success rate of $company_name is $percentage% . If the percentage is above 50%, give him instructions and suggestions. If the percentage is below 50%, please offer him alternative choices."}
+        {'role': 'system', 'content': " Now please output the percentage that the user could reach his goal in the format of 'Calculated success rate of $company_name is $percentage% . If the percentage is above 50%, give him instructions and suggestions. If the percentage is below 50%, please offer him alternative choices."}
     ]
-
 )
-
 
 
 # messages=[
@@ -30,5 +28,5 @@ response = openai.ChatCompletion.create(
 
 print(response['choices'][0]['message']['content'])
 
-with open('./openAI-api/Example/response.json', 'w') as f:
+with open('./openAI-api/scripts/instruction.json', 'w') as f:
     json.dump(response, f)

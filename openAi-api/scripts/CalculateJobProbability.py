@@ -30,5 +30,5 @@ response = openai.ChatCompletion.create(
 
 print(response['choices'][0]['message']['content'])
 
-with open('./openAI-api/Example/response.json', 'w') as f:
+with open('./openAI-api/scripts/probability.json', 'w') as f:
     json.dump(response, f)
