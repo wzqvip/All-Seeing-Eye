@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 msz_python_main/tests/
 msz_python_main/tests
+msz_python_main/tests/flush.py
