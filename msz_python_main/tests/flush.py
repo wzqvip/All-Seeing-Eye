@@ -2,6 +2,7 @@
 # https://beta.openai.com/docs/api-reference/completions/create
 
 # record the time before the request is sent
+#my test
 import time
 import openai
 
