@@ -5,7 +5,7 @@
 import time
 import openai
 
-openai.api_key="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"
+openai.api_key=""
 
 start_time = time.time()
 
