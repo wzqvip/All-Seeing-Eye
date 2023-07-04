@@ -4,12 +4,12 @@ import json
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-user_description = "I have a degree in Computer Science, 2 years of experience in software development. Can I earn 1 millon dollar a month?"
+user_description = "I have a degree in Computer Science, 2 years of experience in software development, and I'm proficient in Python and Java. I want to apply for the position of Senior Software Engineer at OPENAI."
 # user_description= "I'm graduated from elementary school but I have doctor's degree. I want a job as Presendent."
 
 
 response = openai.ChatCompletion.create(
-    model="gpt-3.5-turbo",
+    model="gpt-3.5-turbo-0301",
     messages=[
         {"role": "system", "content": "You are a helpful career planning assistant. You will tell user how he could reach his goal. And tell him what else he can do."},
         # {"role" : "user",  "content": "This is an example output,please follow this format: Calculated success rate of Microsoft is 10%. Based on your description of not having any computer knowledge, the chances of being accepted at Microsoft are quite low.\n\nHowever, I can suggest some alternative career options with a higher probability of acceptance:\n\n1. Sales Representative: Success rate 75%\n2. Marketing Coordinator: Success rate 80%\n3. Administrative Assistant: Success rate 85%\n4. Customer Service Representative: Success rate 90%\n\nThese are just a few options to consider based on your current skillset. It's important to remember that gaining computer knowledge and skills can significantly increase your chances of being accepted into the tech industry."},
