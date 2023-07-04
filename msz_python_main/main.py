@@ -1,11 +1,19 @@
 import openai
+import lib.jobfinding as jobfinding
 
-openai.api_key = "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" 
+KEY ="" 
 
-completion = openai.ChatCompletion.create(
-  model="gpt-3.5-turbo", 
-  messages=[{"role": "user", "content": "test"},{"role": "system", "content": "randomly say something!"}],
-  temperature=1.5,
-)
+openai.api_key = KEY
 
-print(completion)
+# completion = openai.ChatCompletion.create(
+#   model="gpt-3.5-turbo", 
+#   messages=[{"role": "user", "content": "test"},{"role": "system", "content": "randomly say something!"}],
+#   temperature=1.5,
+# )
+
+# print(completion)
+
+new_model = jobfinding.JobFindingGPT(KEY,flush=True)
+new_model.main()
+
+
