@@ -13,7 +13,7 @@ openai.api_key = KEY
 app = Flask(__name__)
 
 
-@app.route('/api', methods=['POST'])
+@app.route('/1', methods=['POST'])
 def process():
     data = request.get_json()  # 获取前端发送的数据
     m_type = data.get('type')  # 获取字典中的'text'字段
@@ -52,4 +52,4 @@ def process():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(port="8081",debug=True)
