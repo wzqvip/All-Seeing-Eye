@@ -4,9 +4,8 @@ import json
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-# user_description = "I'm a 30-year-old software engineer living in San Francisco. I'm passionate about technology and love to travel. What does my future look like?"
-# user_description= "I'm graduated from elementary school but I have doctor's degree. I want a job as Presendent."
-user_description = "I'm a CS graduated student, I have less money. I live in China, I'm longing for freedom in USA. I want a big house and a cute wife."
+user_description = "I'm a 30-year-old software engineer living in San Francisco. I'm passionate about technology and love to travel. What does my future look like?"
+# user_description = "I'm a CS graduated student, I have less money. I live in China, I'm longing for freedom in USA."
 
 response = openai.ChatCompletion.create(
     model="gpt-3.5-turbo-0301",
