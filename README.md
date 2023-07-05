@@ -44,29 +44,7 @@ We will use AI-enhanced voice-to-text technology. Users can input voice or video
 
 ## Back End
 
-Please set your proxy for the command prompt
-
-And run:
-
-```
-python -m venv myenv
-
-Set-ExecutionPolicy RemoteSigned
-
-myenv\Scripts\activate
-
-pip install -r requirements.txt
-
-python openAI-api/framework/main.py
-```
-
-To deactivate the environment:
-
-```
-myenv\Scripts\deactivate
-```
-
-#### Setup the chat bot
+#### Setup 
 
 1. Set up a Python virtual environment and install the `openai` package:
 
