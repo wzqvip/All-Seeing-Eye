@@ -4,9 +4,9 @@ import json
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-user_description = "I have a degree in Computer Science, 2 years of experience in software development, and I'm proficient in Python and Java. I want to apply for the position of Senior Software Engineer at OPENAI."
+user_description = "I have a degree in Computer Science, 2 years of experience in software development, and I'm proficient in Python and Java. I want to apply for the position of Senior Software Engineer at Google."
 # user_description= "I'm graduated from elementary school but I have doctor's degree. I want a job as Presendent."
-
+user_description = "I have ten years of driving experience. I want to be a texi driver to earn a live. Will i success?"
 
 response = openai.ChatCompletion.create(
     model="gpt-3.5-turbo-0301",
@@ -30,5 +30,5 @@ response = openai.ChatCompletion.create(
 
 print(response['choices'][0]['message']['content'])
 
-with open('./openAI-api/scripts/probability.json', 'w') as f:
+with open('probability.json', 'w') as f:
     json.dump(response, f)

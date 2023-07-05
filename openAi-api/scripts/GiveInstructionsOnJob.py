@@ -4,7 +4,7 @@ import json
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-user_description = "I have a degree in Computer Science, 2 years of experience in software development, and I'm proficient in Python and Java. I want to apply for the position of Senior Software Engineer at OPENAI."
+user_description = "I'm an experienced programmer, software developer. I have been worked at Google, Microsoft. I want to apply for a job as senior software developer at Amazon."
 # user_description= "I'm graduated from elementary school but I have doctor's degree. I want a job as Presendent."
 
 
@@ -28,5 +28,5 @@ response = openai.ChatCompletion.create(
 
 print(response['choices'][0]['message']['content'])
 
-with open('./openAI-api/scripts/instruction.json', 'w') as f:
+with open('instruction.json', 'w') as f:
     json.dump(response, f)

@@ -18,5 +18,5 @@ response = openai.ChatCompletion.create(
 
 print(response['choices'][0]['message']['content'])
 
-with open('./openAI-api/scripts/futherPath.json', 'w') as f:
+with open('futherPath.json', 'w') as f:
     json.dump(response, f)
