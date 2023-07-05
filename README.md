@@ -107,7 +107,7 @@ Due to time limitation, we will mainly focus on career planning, job acquirement
 
 非常简洁，非常朴素的一个UI，没有华丽的装饰。
 
-用户输入自己的需求之后，按确定键。 后端收到请求之后会判断问题类型，并依据不同的情况进行处理。 
+用户输入自己的需求之后，按确定键。 后端收到请求之后会判断问题类型，并依据不同的情况进行处理。
 
 预测的结果会呈现在下面。
 
@@ -118,9 +118,6 @@ Due to time limitation, we will mainly focus on career planning, job acquirement
 #### 咨询历史记录
 
 ![1688561673548](image/README/1688561673548.png)
-
-
-
 
 ## Back End
 
@@ -146,7 +143,6 @@ However, if you're looking for alternative options, here are a few that may inte
 3. Developer at Apple: Success rate 75%
 ```
 
-
 User2:
 
 ```
@@ -164,7 +160,6 @@ If for any reason you are not accepted as a taxi driver, there are a few other o
 2. Truck driver: Success rate 75%
 3. Delivery Driver: Success rate 90%
 ```
-
 
 ### Provide suggestions to better apply for a job
 
@@ -192,7 +187,6 @@ To increase the chances of being hired for this or any other position, here are 
 5. Build a personal project that can reflect your coding ability.
 ```
 
-
 User2:
 
 ```
@@ -217,7 +211,6 @@ Good luck with your application! If you are interested, here are some other job 
 3. Principal Engineer at Microsoft.
 ```
 
-
 ### *Predict future life trajectory*
 
 User1:
@@ -239,8 +232,6 @@ Around the age of 40, you will have achieved great success in your career and wi
 
 In your fifties and beyond, you will continue to pursue new experiences and adventures. You will remain curious and passionate, always seeking to learn more about the world around you. Your life will be full of love, happiness, success, and fulfillment.
 ```
-
-
 
 User2:
 
