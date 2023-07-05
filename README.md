@@ -103,6 +103,25 @@ Due to time limitation, we will mainly focus on career planning, job acquirement
 
 ## Front End
 
+### 人生预测器-UI
+
+非常简洁，非常朴素的一个UI，没有华丽的装饰。
+
+用户输入自己的需求之后，按确定键。 后端收到请求之后会判断问题类型，并依据不同的情况进行处理。 
+
+预测的结果会呈现在下面。
+
+*因为时间关系，没有完成前后端的对接。 上面显示的是测试文字， 功能部分请查看后端。*
+
+![1688561653129](image/README/1688561653129.png)
+
+#### 咨询历史记录
+
+![1688561673548](image/README/1688561673548.png)
+
+
+
+
 ## Back End
 
 ### Calculate the probability of successful job application
