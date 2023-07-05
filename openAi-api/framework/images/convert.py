@@ -8,12 +8,12 @@ import os
 # JSON_FILE = DATA_DIR / "An ec-1667994848.json"
 # IMAGE_DIR = Path.cwd() / "images" / JSON_FILE.stem
 
-DATA_DIR =  Path.cwd()/"openAi-api"/"framework"/"images"/"responses"
+DATA_DIR =  Path.cwd()/"openAI-api"/"framework"/"images"/"responses"
 
 for filename in os.listdir(DATA_DIR):
     if filename.endswith(".json"):
         JSON_FILE =  DATA_DIR / filename
-        IMAGE_DIR =  Path.cwd()/"openAi-api"/"framework"/ "images" / "images"
+        IMAGE_DIR =  Path.cwd()/"openAI-api"/"framework"/ "images" / "images"
 
         IMAGE_DIR.mkdir(parents=True, exist_ok=True)
 
