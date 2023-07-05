@@ -38,18 +38,14 @@ The AI model is based on GPT-3.5 or GPT-4. We will fine-tune the model and build
 
 We will use AI-enhanced voice-to-text technology. Users can input voice or video, and after converting to text, we extract emotional features from the voice and video, such as optimism or pessimism. These variables are included in the user profile.
 
-
 # How To Run
 
 ## Front End
 
-
-
 ## Back End
 
-
-
-
+1. set the environment variable PATH:  OPENAI_API_KEY="your key here"
+2. run openAi-api/main.py
 
 # Special Note
 
