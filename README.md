@@ -1,4 +1,3 @@
-
 # All-Seeing-Eye
 
 All Seeing Eye - Unique Hackday Project.
@@ -19,7 +18,6 @@ The All-Seeing-Eye is an innovative and comprehensive AI-powered tool designed t
 3. **Career Planning** : The AI can help users plan their career paths. For instance, if a user is in a poverty-stricken country and unsure of how to generate income, the AI can provide career advice and planning based on the user's interests and abilities.
 4. **Personal Relationships** : The AI can assist users in resolving emotional issues. For instance, if a user has feelings for someone, the AI can predict the likelihood of a successful relationship based on the user's behavior and feedback, and provide suggestions for improvement.
 
-
 # Implementation
 
 The All Seeing Eye project is a web-based application that includes both front-end and back-end development.
@@ -39,3 +37,20 @@ The AI model is based on GPT-3.5 or GPT-4. We will fine-tune the model and build
 ## Data Type Conversion
 
 We will use AI-enhanced voice-to-text technology. Users can input voice or video, and after converting to text, we extract emotional features from the voice and video, such as optimism or pessimism. These variables are included in the user profile.
+
+
+# How To Run
+
+## Front End
+
+
+
+## Back End
+
+
+
+
+
+# Special Note
+
+Due to time limitation, we will mainly focus on career planning, job acquirement.
