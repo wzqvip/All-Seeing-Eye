@@ -159,3 +159,4 @@ cython_debug/
 #.idea/
 
 myenv/
+WebUI/vue/node_modules
