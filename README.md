@@ -1,4 +1,4 @@
-# All-Seeing-Eye
+# Life predictor
 
 All Seeing Eye - Unique Hackday Project.
 
