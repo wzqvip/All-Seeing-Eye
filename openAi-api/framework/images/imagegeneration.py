@@ -5,7 +5,7 @@ from pathlib import Path
 import openai
 def generate(PROMPT):
 
-    DATA_DIR =Path.cwd()/"openAi-api"/"framework"/"images"/"responses"
+    DATA_DIR =Path.cwd()/"openAI-api"/"framework"/"images"/"responses"
     # DATA_DIR = Path.cwd() / "msz_python_main"/ "images" / "responses"
 
     DATA_DIR.mkdir(exist_ok=True)

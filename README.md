@@ -51,7 +51,8 @@ We will use AI-enhanced voice-to-text technology. Users can input voice or video
 <pre><div class="bg-black rounded-md mb-4"><div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md">python -m venv venv
 source venv/bin/activate  # For Linux and macOS
 venv\Scripts\activate  # For Windows
-pip install openai
+cd openAI-api/framework
+pip install -r requirements.txt
 </code></div></div></pre>
 
 2. Set your API key as an environment variable:
@@ -63,9 +64,8 @@ $env:OPENAI_API_KEY="your_api_key_here"  # For Windows powershell
 
 3. Run the `main.py` script:
 
-<pre><div class="bg-black rounded-md mb-4"><div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md">python openai-api/framework/main.py
+<pre><div class="bg-black rounded-md mb-4"><div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md">python main.py
 </code></div></div></pre>
-
 
 # Special Note
 
