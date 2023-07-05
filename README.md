@@ -44,7 +44,7 @@ We will use AI-enhanced voice-to-text technology. Users can input voice or video
 
 ## Back End
 
-Setup the chat bot
+#### Setup 
 
 1. Set up a Python virtual environment and install the `openai` package:
 
