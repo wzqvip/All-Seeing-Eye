@@ -42,40 +42,16 @@ We will use AI-enhanced voice-to-text technology. Users can input voice or video
 
 ## Front End
 
-### Project Setup
-
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-
-```
-npm run build
-```
-
-### Lints and fixes files
-
-```
-npm run lint
-```
-
 ## Back End
 
-#### Setup
+#### Setup 
 
-1. Set up a Python virtual environment and install the necessary package:
+1. Set up a Python virtual environment and install the `openai` package:
 
 <pre><div class="bg-black rounded-md mb-4"><div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md">python -m venv venv
 source venv/bin/activate  # For Linux and macOS
-.\venv\Scripts\activate  # For Windows
-cd .\openAI-api/framework
+venv\Scripts\activate  # For Windows
+cd openAI-api/framework
 pip install -r requirements.txt
 </code></div></div></pre>
 

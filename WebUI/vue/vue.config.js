@@ -1,3 +1,0 @@
-
-
-lintOnSave: false
