@@ -1,32 +1,40 @@
 <template>
-
   <div>
-
-  <div>请帮我预测就职Web前端成功率</div>
-  <el-input v-model="form.input" placeholder="Please input" ></el-input>
-  <el-button>确定</el-button>
+    <h1>人生预测助手</h1>
+    <el-input v-model="form.input" placeholder="Please input"></el-input>
+    <el-button @click="submitInput(1)">计算应聘成功率</el-button>
+    <el-button @click="submitInput(2)">给出应聘建议</el-button>
+    <el-button @click="submitInput(3)">预测未来</el-button>
+    <div v-if="response">{{ response }}</div>
   </div>
-
-
 </template>
 
 <script>
-import theHeader from "@/components/theHeader";
+import axios from 'axios'
+
 export default {
   name: "1",
-  // eslint-disable-next-line vue/no-unused-components
-  components: {theHeader},
   data() {
     return {
-      form:{},
+      form: {},
+      response: null
     }
   },
   methods: {
-
+    async submitInput(type) {
+      const data = {
+        type: type,
+        content: this.form.input,
+        is_audio_input: false,  // replace with actual value
+        audio_input: null,  // replace with actual audio clip if any
+        gen_img: false  // replace with actual value
+      }
+      const res = await axios.post('http://localhost:6666/api', data)  // replace 'http://localhost:6666/api' with actual API endpoint
+      this.response = res.data.result
+    }
   },
 }
 </script>
 
 <style scoped>
-
 </style>
