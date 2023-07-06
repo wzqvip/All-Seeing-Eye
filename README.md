@@ -1,6 +1,6 @@
 # All-Seeing-Eye
 
-All Seeing Eye - Unique Hackday Project.
+Life Predictor(NEW NAME) - Unique Hackday Project.
 
 # Project Description
 
