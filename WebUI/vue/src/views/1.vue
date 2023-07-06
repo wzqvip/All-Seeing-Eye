@@ -29,7 +29,7 @@ export default {
         audio_input: null,  // replace with actual audio clip if any
         gen_img: false  // replace with actual value
       }
-      const res = await axios.post('http://localhost:6666/api', data)  // replace 'http://localhost:6666/api' with actual API endpoint
+      const res = await axios.post('http://cloud.tacoin.site:15000/api', data)  // replace 'http://localhost:6666/api' with actual API endpoint
       this.response = res.data.result
     }
   },
