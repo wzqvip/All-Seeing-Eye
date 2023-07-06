@@ -69,5 +69,9 @@ elif select == "3":
     x = requests.post(url, json = myobj)
     print(x.text.replace("\\n", "\n"))
 
-else: print("Invalid input, please try again")
+else: 
+    print("Invalid input, please try again")
 
+print("-----------------------------------")
+print("The above result are just for a reference. No law enforcement.\n")
+print("-----------------------------------")
