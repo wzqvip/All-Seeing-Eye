@@ -159,3 +159,4 @@ cython_debug/
 #.idea/
 
 WebUI/vue/node_modules
+openAI-api/scripts/.vs/slnx.sqlite
