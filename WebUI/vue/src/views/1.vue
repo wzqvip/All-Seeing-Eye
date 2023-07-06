@@ -26,25 +26,35 @@ export default {
   name: "1",
   data() {
     return {
-      form: {},
+      form: {
+        input: ''
+      },
       response: null
     }
   },
   methods: {
-    async submitInput(type) {
-      const data = {
+    submitInput(type) {
+      const payload = {
         type: type,
         content: this.form.input,
-        is_audio_input: false,  // replace with actual value
-        audio_input: null,  // replace with actual audio clip if any
-        gen_img: false  // replace with actual value
+        is_audio_input: false,
+        audio_input: "",
+        gen_img: false
       }
-      const res = await axios.post('http://cloud.tacoin.site:15000/api', data)  // replace 'http://localhost:6666/api' with actual API endpoint
-      this.response = res.data.result
-    }
-  },
+
+      axios({
+        method: 'post',
+        url: 'http://cloud.tacoin.site:15000/api',
+        data: JSON.stringify(payload),
+        headers: { 'Content-Type': 'application/json' }
+      })
+        .then(res => {
+          this.response = res.data.result
+        })
+        .catch(err => {
+          console.log(err)
+        })
+    },
+  }
 }
 </script>
-
-<style scoped>
-</style>
