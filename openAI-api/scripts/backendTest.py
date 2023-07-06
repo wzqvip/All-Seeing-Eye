@@ -1,8 +1,8 @@
 import requests
 import json
 
-url = 'http://cloud.tacoin.site:15000/api'
-
+# url = 'http://cloud.tacoin.site:15000/api'
+url = 'http://127.0.0.1:5000/api' #local
 """"
 发送一个这样的包到后端来：{type": int,
         "content": "string",
@@ -17,7 +17,14 @@ url = 'http://cloud.tacoin.site:15000/api'
 }}
 """
 
-select = input("Please select a function: \n 0: test \n 1: job finding \n 2: instruction \n 3: predict future \n")
+
+# import openai
+# audio_file= open("/path/to/file/audio.mp3", "rb")
+# transcript = openai.Audio.transcribe("whisper-1", audio_file)
+# voice_google_frontend_engineer = open("openAI-api/framework/voices/Google_frontend_engineer.mp3", "rb")
+voice_google_frontend_engineer = open("./framework/voices/Google_frontend_engineer.mp3", "rb")
+
+select = input("Please select a function: \n 0: test \n 1: job finding \n 2: instruction \n 3: predict future \n 4: voice + job finding\n")
 
 if select == "0":
     myobj = {
@@ -41,7 +48,7 @@ if select == "1":
         "gen_img": False
     }
     x = requests.post(url, json = myobj)
-    print(x.text.replace("\\n", "\n"))
+    print(x.text)
     exit()
 
 elif select == "2":
@@ -69,6 +76,20 @@ elif select == "3":
     x = requests.post(url, json = myobj)
     print(x.text.replace("\\n", "\n"))
 
+elif select == "4":
+    myobj = {
+        "type": 1,
+        "content": "",
+        "is_audio_input": True,
+        "audio_input": "",
+        "gen_img": False
+    }
+
+    voice = {'file': voice_google_frontend_engineer}
+    response = requests.post(url+'/uploadMP3', files=voice)
+    x = requests.post(url, json = myobj)
+    print(x.text)
+    exit()
 else: 
     print("Invalid input, please try again")
 
