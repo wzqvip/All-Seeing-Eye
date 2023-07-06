@@ -39,7 +39,11 @@ def process():
     else:
         m_content = data.get('content')
 
-    m_image = None
+    if (data.get('gen_img')):
+        m_image = imagegeneration.generate(m_content)
+    else:
+        m_image = None
+
     if (m_type == 0):
         processed_text = "test"
     elif (m_type == 1):
@@ -50,11 +54,8 @@ def process():
         processed_text = functions.give_instruction(m_content)
     elif (m_type == 3):
         processed_text = functions.predict_future(m_content)
-    try:
-        if (data.get('gen_img')):
-            m_image = imagegeneration.generate(m_content)
-    except:
-        m_image = None
+    
+
     # 将处理结果返回给前端
     return jsonify({'type': m_type, 'result': processed_text, 'image': m_image})
 

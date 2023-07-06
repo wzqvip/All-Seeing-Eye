@@ -1,6 +1,6 @@
 import requests
 import json
-
+from pathlib import Path
 # url = 'http://cloud.tacoin.site:15000/api'
 url = 'http://127.0.0.1:5000/api' #local
 """"
@@ -22,9 +22,11 @@ url = 'http://127.0.0.1:5000/api' #local
 # audio_file= open("/path/to/file/audio.mp3", "rb")
 # transcript = openai.Audio.transcribe("whisper-1", audio_file)
 # voice_google_frontend_engineer = open("openAI-api/framework/voices/Google_frontend_engineer.mp3", "rb")
-voice_google_frontend_engineer = open("./framework/voices/Google_frontend_engineer.mp3", "rb")
+voice_path = Path.cwd()/ "openAI-api"/"framework"/"voices"/"Google_frontend_engineer.mp3"
+# "./framework/voices/Google_frontend_engineer.mp3"
+voice_google_frontend_engineer = open(voice_path, "rb")
 
-select = input("Please select a function: \n 0: test \n 1: job finding \n 2: instruction \n 3: predict future \n 4: voice + job finding\n")
+select = input("Please select a function: \n 0: test \n 1: job finding \n 2: instruction \n 3: predict future \n 4: voice + job finding\n 5: generate image\n")
 
 if select == "0":
     myobj = {
@@ -75,7 +77,7 @@ elif select == "3":
     }
     x = requests.post(url, json = myobj)
     print(x.text.replace("\\n", "\n"))
-
+    exit()
 elif select == "4":
     myobj = {
         "type": 1,
@@ -87,6 +89,17 @@ elif select == "4":
 
     voice = {'file': voice_google_frontend_engineer}
     response = requests.post(url+'/uploadMP3', files=voice)
+    x = requests.post(url, json = myobj)
+    print(x.text)
+    exit()
+elif select == "5":
+    myobj = {
+        "type": 1,
+        "content": "And draw a scenery picture!",
+        "is_audio_input": False,
+        "audio_input": "",
+        "gen_img": True
+    }
     x = requests.post(url, json = myobj)
     print(x.text)
     exit()
