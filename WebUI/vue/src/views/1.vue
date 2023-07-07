@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h1>人生预测助手</h1>
     <el-input v-model="form.input" placeholder="Please input"></el-input>
     <el-button @click="submitInput(1)">计算应聘成功率</el-button>
@@ -59,3 +59,12 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+.container {
+ 
+  background-image: linear-gradient(to right, #fbc2eb, #a6c1ee);
+}
+
+</style>
