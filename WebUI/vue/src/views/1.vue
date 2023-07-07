@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1>人生预测助手</h1>
-    <el-input class="input-field" type="textarea" :rows="2" :autosize="{ minRows: 2, maxRows: 10}" v-model="form.input" placeholder="Please input"></el-input>
+    <el-input type="textarea" :rows="2" :autosize="{ minRows: 2, maxRows: 10}" v-model="form.input" placeholder="Please input"></el-input>
     <el-button @click="submitInput(1)">计算应聘成功率</el-button>
     <el-button @click="submitInput(2)">给出应聘建议</el-button>
     <el-button @click="submitInput(3)">预测未来</el-button>
@@ -75,7 +75,7 @@ export default {
   width: 100%;  /* This will make the input field take up the full width of its parent container */
   resize: both; /* This allows the user to resize both the width and the height of the input field */
   overflow: auto; /* Necessary for 'resize' to work */
-  /* background-color: #FFC0CB; This will give the input field a light pink background */
+  background-color: #FFC0CB; /*This will give the input field a light pink background */
 }
 
 
