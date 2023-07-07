@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS  # 新增这一行
 import openai
 import lib.jobfinding as jobfinding
 import os
@@ -11,6 +12,8 @@ openai.api_key = KEY
 
 
 app = Flask(__name__)
+CORS(app)
+
 
 @app.route('/api/uploadMP3', methods=['POST'])
 def upload_file():
