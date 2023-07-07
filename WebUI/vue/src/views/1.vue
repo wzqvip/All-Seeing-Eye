@@ -1,21 +1,25 @@
 <template>
   <div class="container">
     <h1>人生预测助手</h1>
-    <el-input type="textarea" :rows="2" :autosize="{ minRows: 2, maxRows: 10}" v-model="form.input" placeholder="Please input"></el-input>
+    <el-input type="textarea" :rows="2" :autosize="{ minRows: 2, maxRows: 10 }" v-model="form.input"
+      placeholder="Please input"></el-input>
     <el-button @click="submitInput(1)">计算应聘成功率</el-button>
     <el-button @click="submitInput(2)">给出应聘建议</el-button>
     <el-button @click="submitInput(3)">预测未来</el-button>
     <h3>结果展示：</h3>
-    <div  style="border:solid;border-radius: 10px;border-color:#51b6b6" v-if="response">{{ response }}</div>
+    <div style="border:solid;border-radius: 10px;border-color:#51b6b6" v-if="response">{{ response }}</div>
 
     <h3>示例输入</h3>
     <p>预测应聘成功概率示例：</p>
-    <p>I have a degree in Computer Science, 2 years of experience in software development, and I'm proficient in Python and Java. I want to apply for the position of Senior Software Engineer at Google.</p>
+    <p>I have a degree in Computer Science, 2 years of experience in software development, and I'm proficient in Python
+      and Java. I want to apply for the position of Senior Software Engineer at Google.</p>
     <p>I have ten years of driving experience. I want to be a taxi driver to earn a living. Will I succeed?</p>
     <p>提供应聘指导建议示例：</p>
-    <p>I'm an experienced programmer, software developer. I have been worked at Google, Microsoft. I want to apply for a job as senior software developer at Amazon.</p>
+    <p>I'm an experienced programmer, software developer. I have been worked at Google, Microsoft. I want to apply for a
+      job as senior software developer at Amazon.</p>
     <p>预测人生示例：</p>
-    <p>I'm a 30-year-old software engineer living in San Francisco. I'm passionate about technology and love to travel. What does my future look like?</p>
+    <p>I'm a 30-year-old software engineer living in San Francisco. I'm passionate about technology and love to travel.
+      What does my future look like?</p>
     <p>I'm a CS graduated student, I have less money. I live in China, I'm longing for freedom in USA.</p>
   </div>
 </template>
@@ -63,7 +67,8 @@ export default {
 <style scoped>
 .container {
   background-image: linear-gradient(to right, #fbc2eb, #a6c1ee);
-
+  background-color: #FFC0CB;
+  /*This will give the input field a light pink background */
   font-family: Arial, sans-serif;
   padding: 20px;
   border-radius: 5px;
@@ -72,10 +77,14 @@ export default {
 }
 
 .input-field {
-  width: 100%;  /* This will make the input field take up the full width of its parent container */
-  resize: both; /* This allows the user to resize both the width and the height of the input field */
-  overflow: auto; /* Necessary for 'resize' to work */
-  background-color: #FFC0CB; /*This will give the input field a light pink background */
+  width: 100%;
+  /* This will make the input field take up the full width of its parent container */
+  resize: both;
+  /* This allows the user to resize both the width and the height of the input field */
+  overflow: auto;
+  /* Necessary for 'resize' to work */
+  background-color: #FFC0CB;
+  /*This will give the input field a light pink background */
 }
 
 
@@ -108,5 +117,4 @@ p {
 .el-button:last-child {
   margin-right: 0;
 }
-
 </style>
