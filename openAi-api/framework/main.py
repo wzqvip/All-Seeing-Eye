@@ -37,7 +37,7 @@ def process():
         # m_audio_input = data.get('audio_input')  # mp3?
         # m_content = functions.derive_text_from_audio(m_audio_input)
         # you should use url request to get the audio file
-        audio_file= open('/voice.mp3', "rb")
+        audio_file= open(VOICE_DIR / 'voice.mp3', "rb")
         m_content = openai.Audio.transcribe("whisper-1", audio_file)['text']
     # elif(m_is_video_input):
     #     m_video_input=data.get('video_input') #mp4?

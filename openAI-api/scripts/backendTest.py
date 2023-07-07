@@ -22,7 +22,7 @@ url = 'http://cloud.tacoin.site:15000/api'
 # audio_file= open("/path/to/file/audio.mp3", "rb")
 # transcript = openai.Audio.transcribe("whisper-1", audio_file)
 # voice_google_frontend_engineer = open("openAI-api/framework/voices/Google_frontend_engineer.mp3", "rb")
-voice_path = Path.cwd()/ "openAI-api"/"framework"/"voices"/"Google_frontend_engineer.mp3"
+voice_path = Path.cwd()/ "openAI-api"/"framework"/"voices_test"/"Google_frontend_engineer.mp3"
 # "./framework/voices/Google_frontend_engineer.mp3"
 voice_google_frontend_engineer = open(voice_path, "rb")
 
