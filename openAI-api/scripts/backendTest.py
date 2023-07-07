@@ -104,7 +104,7 @@ elif select == "5":
     }
     x = requests.post(url, json = myobj)
     print(x.text)
-    image_url = "http://127.0.0.1:5000/api/get_image"
+    image_url = url+"/get_image"
     response = requests.get(image_url)
     if response.status_code == 200:
         # 以二进制写入的方式打开一个文件
