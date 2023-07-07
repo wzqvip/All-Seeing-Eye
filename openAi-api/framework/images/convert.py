@@ -33,7 +33,8 @@ def convert_json_to_png(json_img,IMAGE_DIR =  Path.cwd()/"openAI-api"/"framework
         response = json.load(file)
     for index, image_dict in enumerate(response["data"]):
         image_data = b64decode(image_dict["b64_json"])
-        image_file = IMAGE_DIR / f"{json_img.stem}-{index}.png"
+        image_file = IMAGE_DIR / f"{json_img.stem}.png"
+        # image_file = IMAGE_DIR / f"{json_img.stem}-{index}.png"
         with open(image_file, mode="wb") as png:
             png.write(image_data)
-    return image_file
+    return image_data
