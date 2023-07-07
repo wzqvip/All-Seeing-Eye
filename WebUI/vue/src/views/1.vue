@@ -5,7 +5,8 @@
     <el-button @click="submitInput(1)">计算应聘成功率</el-button>
     <el-button @click="submitInput(2)">给出应聘建议</el-button>
     <el-button @click="submitInput(3)">预测未来</el-button>
-    <div v-if="response">{{ response }}</div>
+    <h3>结果展示：</h3>
+    <div  style="border:solid;border-radius: 10px;border-color:#51b6b6" v-if="response">{{ response }}</div>
 
     <h3>示例输入</h3>
     <p>预测应聘成功概率示例：</p>
