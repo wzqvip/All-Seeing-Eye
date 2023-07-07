@@ -5,6 +5,7 @@ import lib.jobfinding as jobfinding
 import os
 from images import imagegeneration
 import lib.api_functions as functions
+from pathlib import Path
 
 KEY = os.environ.get("OPENAI_API_KEY")
 
@@ -14,11 +15,12 @@ openai.api_key = KEY
 app = Flask(__name__)
 CORS(app)
 
+VOICE_DIR =Path.cwd() / "openAI-api" / "framework" / "voices"
 
 @app.route('/api/uploadMP3', methods=['POST'])
 def upload_file():
     file = request.files['file']
-    file.save('/voice.mp3')
+    file.save( VOICE_DIR /'voice.mp3')
 
 @app.route('/api', methods=['POST'])
 def process():
@@ -60,7 +62,7 @@ def process():
     
 
     # 将处理结果返回给前端
-    return jsonify({'type': m_type, 'result': processed_text, 'image': m_image})
+    return jsonify({'type': m_type, 'result': processed_text, 'image': "TODO: a url"})
 
 
 if __name__ == "__main__":
