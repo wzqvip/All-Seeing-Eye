@@ -1,7 +1,13 @@
 <template>
   <div class="container">
     <h1>人生预测助手</h1>
-    <el-input v-model="form.input" placeholder="Please input"></el-input>
+    <el-input
+      type="textarea"
+      :rows="2"
+      :autosize="{ minRows: 2, maxRows: 10}"
+      v-model="form.input"
+      placeholder="Please input"
+    ></el-input>
     <el-button @click="submitInput(1)">计算应聘成功率</el-button>
     <el-button @click="submitInput(2)">给出应聘建议</el-button>
     <el-button @click="submitInput(3)">预测未来</el-button>
@@ -61,10 +67,50 @@ export default {
 </script>
 
 <style scoped>
-
 .container {
- 
   background-image: linear-gradient(to right, #fbc2eb, #a6c1ee);
+
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.input-field {
+  width: 100%;  /* This will make the input field take up the full width of its parent container */
+  resize: both; /* This allows the user to resize both the width and the height of the input field */
+  overflow: auto; /* Necessary for 'resize' to work */
+}
+
+
+h1 {
+  color: #101010;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+h3 {
+  color: #251f64;
+  padding-top: 20px;
+}
+
+p {
+  color: #000000;
+  line-height: 1.6;
+}
+
+.el-input {
+  margin-bottom: 20px;
+}
+
+.el-button {
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.el-button:last-child {
+  margin-right: 0;
 }
 
 </style>
