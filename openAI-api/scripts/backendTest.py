@@ -1,8 +1,8 @@
 import requests
 import json
 from pathlib import Path
-# url = 'http://cloud.tacoin.site:15000/api'
-url = 'http://127.0.0.1:5000/api' #local
+url = 'http://cloud.tacoin.site:15000/api'
+# url = 'http://127.0.0.1:5000/api' #local
 """"
 发送一个这样的包到后端来：{type": int,
         "content": "string",
