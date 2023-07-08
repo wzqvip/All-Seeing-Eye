@@ -7,7 +7,7 @@
     <el-button @click="submitInput(2)">给出应聘建议</el-button>
     <el-button @click="submitInput(3)">预测未来</el-button>
     <h3>结果展示：</h3>
-    <div style="border:solid;border-radius: 10px;border-color:#51b6b6" v-if="response">{{ response }}</div>
+    <div style="border:solid;border-radius: 10px;border-color:#51b6b6" v-html="response"></div>
 
     <h3>示例输入</h3>
     <p>预测应聘成功概率示例：</p>
@@ -54,7 +54,8 @@ export default {
         headers: { 'Content-Type': 'application/json' }
       })
         .then(res => {
-          this.response = res.data.result
+          /* replace "\n" with "<br>" */
+          this.response = res.data.result.replace(/\n/g, "<br>")
         })
         .catch(err => {
           console.log(err)
