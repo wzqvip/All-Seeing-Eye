@@ -113,7 +113,7 @@ Due to time limitation, we will mainly focus on career planning, job acquirement
 
 *因为时间关系，没有完成前后端的对接。 上面显示的是测试文字， 功能部分请查看后端。*
 
-![1688893334116](image/README/1688893334116.png)
+![1688893488745](image/README/1688893488745.png)
 
 #### 咨询历史记录
 
