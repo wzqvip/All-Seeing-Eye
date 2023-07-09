@@ -1,7 +1,7 @@
 import requests
 import json
 from pathlib import Path
-# url = 'http://172.28.0.8:5000/api'
+# url = 'http://localhost:5000/api'
 url = 'http://127.0.0.1:5000/api' #local
 """"
 发送一个这样的包到后端来：{type": int,
@@ -12,7 +12,7 @@ url = 'http://127.0.0.1:5000/api' #local
 
         
 
-返回一个这样的包：{{
+b返回一个这样的包：{{
   "image": null,
   "result": "response",
   "type": int
