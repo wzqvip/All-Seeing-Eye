@@ -49,7 +49,7 @@ export default {
 
       axios({
         method: 'post',
-        url: 'http://cloud.tacoin.site:15000/api',
+        url: 'http://172.28.0.8:5000/api',
         data: JSON.stringify(payload),
         headers: { 'Content-Type': 'application/json' }
       })

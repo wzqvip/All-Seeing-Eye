@@ -1,4 +1,3 @@
 openai
 flask
 chatgpt
-flask-cors

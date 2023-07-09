@@ -1,14 +1,16 @@
 import requests
 import json
 from pathlib import Path
-url = 'http://cloud.tacoin.site:15000/api'
-# url = 'http://127.0.0.1:5000/api' #local
+# url = 'http://172.28.0.8:5000/api'
+url = 'http://127.0.0.1:5000/api' #local
 """"
 发送一个这样的包到后端来：{type": int,
         "content": "string",
         "is_audio_input": False,
         "audio_input": "path",
         "gen_img": False}
+
+        
 
 返回一个这样的包：{{
   "image": null,
@@ -22,7 +24,9 @@ url = 'http://cloud.tacoin.site:15000/api'
 # audio_file= open("/path/to/file/audio.mp3", "rb")
 # transcript = openai.Audio.transcribe("whisper-1", audio_file)
 # voice_google_frontend_engineer = open("openAI-api/framework/voices/Google_frontend_engineer.mp3", "rb")
-voice_path = Path.cwd()/ "openAI-api"/"framework"/"voices"/"Google_frontend_engineer.mp3"
+voice_path = Path.cwd()/ "openAI-api"/"framework"/"voices_test"/"Google_frontend_engineer.mp3"
+img_save_path = Path.cwd()/ "openAI-api"/"framework"/"images"/"image_test"
+img_name= "output.png" #x.__dict__()['result'][:5]
 # "./framework/voices/Google_frontend_engineer.mp3"
 voice_google_frontend_engineer = open(voice_path, "rb")
 
@@ -102,6 +106,13 @@ elif select == "5":
     }
     x = requests.post(url, json = myobj)
     print(x.text)
+    image_url = url+"/get_image"
+    response = requests.get(image_url)
+    if response.status_code == 200:
+        # 以二进制写入的方式打开一个文件
+        with open(img_save_path/img_name, "wb") as file:
+            # 将图片内容写入文件中
+            file.write(response.content)
     exit()
 else: 
     print("Invalid input, please try again")
