@@ -1,4 +1,4 @@
-# All-Seeing-Eye
+# Life predictor
 
 Life Predictor(NEW NAME) - Unique Hackday Project.
 
