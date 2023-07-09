@@ -113,17 +113,17 @@ Due to time limitation, we will mainly focus on career planning, job acquirement
 
 *因为时间关系，没有完成前后端的对接。 上面显示的是测试文字， 功能部分请查看后端。*
 
-![1688561653129](image/README/1688561653129.png)
+![1688893334116](image/README/1688893334116.png)
 
 #### 咨询历史记录
 
 ![1688561673548](image/README/1688561673548.png)
 
-## Back End
+## back End
+
+### ***Check out openAI-api/scripts/backendTest.py***
 
 ### Calculate the probability of successful job application
-
-*PATH: openAI-api/scripts/CalculateJobProbability.py*
 
 User1:
 
@@ -252,3 +252,11 @@ In the next decade, you will meet the love of your life, but it will not be an e
 
 As you settle into your married life, you will be able to buy a big house, fulfill your dreams, and enjoy the fruits of your labor. However, life is not without its challenges, but you will face them with grace and determination. You will find happiness, fulfillment, and contentment in your life. Remember to always stay true to yourself and never give up on your dreams.
 ```
+
+### Voice to text generation.
+
+Use openAI-api/scripts/backendTest.py
+
+### Image generation
+
+Use openAI-api/scripts/backendTest.py
